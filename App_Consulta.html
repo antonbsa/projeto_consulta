@@ -3,13 +3,19 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="icon" href="logo-sicredi-icon-1024.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
     <title>Prevenção à Fraudes</title>
 </head>
 <style>
     body {
         margin: 0;
         background-color: #FFF;
+        border-style: none;
+
+
+
     }
 
     .bloco {
@@ -34,7 +40,7 @@
         width: 100%;
         height: 50px;
         position: fixed;
-        padding: 5px;
+        padding: 8px;
         background-color: #FFF;
         display: flex;
         align-items: center;
@@ -54,8 +60,23 @@
         display: flex;
         align-items: center;
         flex-direction: row;
+    }
 
+    .input-pesquisa {
 
+        background: transparent;
+        border: 0;
+        border-bottom: 1px solid #35890D;
+        width: 15vw;
+        height: 3vw;
+        font-size: 1.0rem;
+        color: gray;
+        padding: 1vw;
+    }
+
+    .input-pesquisa:hover {
+        background-color: #f4f4f4;
+        border-radius: 10px;
 
     }
 
@@ -72,6 +93,14 @@
         background-color: #B7EC9C;
     }
 
+    #titulo {
+        color: red;
+        display: block;
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+
     .buttons {
         display: flex;
         flex-direction: row;
@@ -84,7 +113,7 @@
     }
 
     .buttons .button {
-        padding: 10px 10px;
+        padding: 12px 20px;
         cursor: pointer;
         border-radius: 4px;
         background-color: #FFF;
@@ -113,11 +142,11 @@
             <img src="./LOGO_SICREDI.PNG" alt="logo">
         </div>
         <div class="input-buttons">
-            <div class="input margin-right">
-                <input placeholder="ID/ MID" id="input-mid" type="text">
+            <div class="margin-right">
+                <input class="input-pesquisa" SIZE=8 MAXLENGTH=8 placeholder="EC/ MID" id="input-mid" type="text">
             </div>
-            <div class="input-buttons margin-right">
-                <input placeholder="CPF / CNPJ" id="input-cpf-cnpj" type="text">
+            <div class="margin-right">
+                <input class="input-pesquisa cpfOuCnpj" placeholder="CPF / CNPJ" id="input-cpf-cnpj" type="text">
             </div>
             <div class="buttons margin margin-bottom">
                 <button class="button" id="btn-search" onclick="search()">Pesquisar</button>
@@ -126,9 +155,23 @@
     </div>
 
     <div id="fundo">
-        <div style="height: 60px;"></div>
+        <div style="height: 70px;"></div>
         <div class="bloco margin" id="bloco1"></div>
-
+        <form>
+            <div class="content">
+                <div class="blc">
+                    <label>Input CPF
+                        <input class="text" type="text" name="txtCPF" id="txtCPF" autofocus data-rule-cpf="true"
+                            data-rule-required="true" data-inputmask="'mask' : '999.999.999-99'" />
+                    </label>
+                </div>
+                <div class="blc">
+                    <label>Input CNPJ
+                        <input class="text" type="text" name="txtCNPJ" id="txtCNPJ" autofocus data-rule-cnpj="true"
+                            data-rule-required="true" data-inputmask="'mask' : '99.999.999/9999-99'" />
+                    </label>
+                </div>
+        </form>
         <div class="bloco margin" id="bloco2">
             <div class="bloco margin" id="associado"></div>
             <div class="bloco margin" style="margin-top: 0;" id="bancaria"></div>
@@ -139,19 +182,19 @@
     <div style="height: 12px; background-color: #F0F0F0;"></div>
     <div id="Rodape">
         <div class="buttons margin margin-bottom">
+            <button class="button">Notificação</button>
             <button class="button">Salvar</button>
-            <button class="button">Exportar</button>
         </div>
     </div>
 </body>
 <script>
-    function showData() {
-        document.querySelector('#bloco1').style.display = '';
+    var options = {
+        onKeyPress: function (cpf, ev, el, op) {
+            var masks = ['000.000.000-000', '00.000.000/0000-00'];
+            $('.cpfOuCnpj').mask((cpf.length > 14) ? masks[1] : masks[0], op);
+        }
     }
-    function search() {
-        console.log(document.querySelector('#input-test').value);
-        showData();
-    }
+    $('.cpfOuCnpj').length > 11 ? $('.cpfOuCnpj').mask('00.000.000/0000-00', options) : $('.cpfOuCnpj').mask('000.000.000-00#', options);
 </script>
 
 </html>
