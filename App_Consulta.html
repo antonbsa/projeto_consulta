@@ -1,0 +1,157 @@
+<!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Prevenção à Fraudes</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        background-color: #FFF;
+    }
+
+    .bloco {
+        min-height: 200px;
+        background-color: #3FA110;
+        border-radius: 10px;
+    }
+
+    .margin {
+        margin: 10px 10px 0px 10px;
+    }
+
+    .margin-bottom {
+        margin-bottom: 10px;
+    }
+
+    .margin-right {
+        margin-right: 10px;
+    }
+
+    #consulta {
+        width: 100%;
+        height: 50px;
+        position: fixed;
+        padding: 5px;
+        background-color: #FFF;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .logo {
+        margin-left: 15px;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    .input-buttons {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+
+
+
+    }
+
+    #fundo {
+        background-color: #F0F0F0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #associado,
+    #bancaria {
+        margin: 10px;
+        border-radius: 10px;
+        background-color: #B7EC9C;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: #FFF;
+        border-radius: 10px;
+        padding: 10px;
+        font-weight: bold;
+    }
+
+    .buttons .button {
+        padding: 10px 10px;
+        cursor: pointer;
+        border-radius: 4px;
+        background-color: #FFF;
+        color: #3FA110;
+        min-width: 100px;
+        font-weight: bold;
+        border: 1px solid #3FA110;
+
+    }
+
+    .buttons .button:hover {
+        background-color: #3FA110;
+        transition: 0.2s background-color;
+        color: #fff;
+
+    }
+
+    .buttons :first-child {
+        margin-right: 10px;
+    }
+</style>
+
+<body>
+    <div id="consulta">
+        <div class="logo">
+            <img src="./LOGO_SICREDI.PNG" alt="logo">
+        </div>
+        <div class="input-buttons">
+            <div class="input margin-right">
+                <input placeholder="ID/ MID" id="input-mid" type="text">
+            </div>
+            <div class="input-buttons margin-right">
+                <input placeholder="CPF / CNPJ" id="input-cpf-cnpj" type="text">
+            </div>
+            <div class="buttons margin margin-bottom">
+                <button class="button" id="btn-search" onclick="search()">Pesquisar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="fundo">
+        <div style="height: 60px;"></div>
+        <div class="bloco margin" id="bloco1"></div>
+
+        <div class="bloco margin" id="bloco2">
+            <div class="bloco margin" id="associado"></div>
+            <div class="bloco margin" style="margin-top: 0;" id="bancaria"></div>
+        </div>
+
+        <div class="bloco margin" id="ADQ"></div>
+    </div>
+    <div style="height: 12px; background-color: #F0F0F0;"></div>
+    <div id="Rodape">
+        <div class="buttons margin margin-bottom">
+            <button class="button">Salvar</button>
+            <button class="button">Exportar</button>
+        </div>
+    </div>
+</body>
+<script>
+    function showData() {
+        document.querySelector('#bloco1').style.display = '';
+    }
+    function search() {
+        console.log(document.querySelector('#input-test').value);
+        showData();
+    }
+</script>
+
+</html>
