@@ -6,6 +6,7 @@
     <link rel="icon" href="logo-sicredi-icon-1024.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+
     <title>Prevenção à Fraudes</title>
 </head>
 <style>
@@ -38,7 +39,7 @@
 
     #consulta {
         width: 100%;
-        height: 50px;
+        height: 70px;
         position: fixed;
         padding: 8px;
         background-color: #FFF;
@@ -46,6 +47,8 @@
         align-items: center;
         flex-direction: row;
         justify-content: space-between;
+        opacity: 95%;
+
     }
 
     .logo {
@@ -127,12 +130,73 @@
     .buttons .button:hover {
         background-color: #3FA110;
         transition: 0.2s background-color;
-        color: #fff;
+        color: #f4f4f4;
 
     }
 
     .buttons :first-child {
         margin-right: 10px;
+    }
+
+    h1 {
+        margin: 10px;
+        color: #FFF;
+        font-style: bold;
+        font-family: Tahoma, Geneva, sans-serif;
+        font: 30px;
+    }
+
+    /*STYLE TABELA _ADQ*/
+
+    table.tabela_adq {
+        font-family: Tahoma, Geneva, sans-serif;
+        background-color: #FFFFFF;
+        width: 97%;
+        height: 200px;
+        text-align: center;
+        border-collapse: collapse;
+    }
+
+    table.tabela_adq td,
+    table.tabela_adq th {
+        border: 1px solid #d0d0d0;
+        padding: 3px 2px;
+    }
+
+    table.tabela_adq tbody td {
+        font-size: 13px;
+        color: #404040;
+    }
+
+    table.tabela_adq tr:nth-child(even) {
+        background: #EBEBEB;
+    }
+
+    table.tabela_adq tr:hover {
+        background-color: #b7bfb791;
+        transition: 0.2s background-color;
+        color: #f4f4f4;
+    }
+
+    table.tabela_adq thead {
+        background: #FFFFFF;
+        border-bottom: 3px solid #514f4f;
+    }
+
+    table.tabela_adq thead th {
+        font-size: 500 12px Tahoma, Geneva, sans-serif;
+        color: #404040;
+        text-align: center;
+        border: 1px solid #d0d0d0;
+
+    }
+
+    table.tabela_adq thead th:first-child {
+        border-left: none;
+    }
+
+    table.tabela_adq tfoot td {
+        font-size: 12px;
     }
 </style>
 
@@ -157,36 +221,108 @@
     <div id="fundo">
         <div style="height: 70px;"></div>
         <div class="bloco margin" id="bloco1"></div>
-        <form>
-            <div class="content">
-                <div class="blc">
-                    <label>Input CPF
-                        <input class="text" type="text" name="txtCPF" id="txtCPF" autofocus data-rule-cpf="true"
-                            data-rule-required="true" data-inputmask="'mask' : '999.999.999-99'" />
-                    </label>
-                </div>
-                <div class="blc">
-                    <label>Input CNPJ
-                        <input class="text" type="text" name="txtCNPJ" id="txtCNPJ" autofocus data-rule-cnpj="true"
-                            data-rule-required="true" data-inputmask="'mask' : '99.999.999/9999-99'" />
-                    </label>
-                </div>
-        </form>
+
         <div class="bloco margin" id="bloco2">
             <div class="bloco margin" id="associado"></div>
             <div class="bloco margin" style="margin-top: 0;" id="bancaria"></div>
         </div>
 
-        <div class="bloco margin" id="ADQ"></div>
+        <div class="bloco margin" id="ADQ">
+            <h1>Tabela de classificação</h1>
+            <table class="tabela_adq" style="margin: 15px;">
+                <thead>
+                    <tr>
+                        <th>Coop.</th>
+                        <th>Conta</th>
+                        <th>Data Inclusão</th>
+                        <th>Data</th>
+                        <th>Código</th>
+                        <th>Des_Hist</th>
+                        <th>Documento</th>
+                        <th>Valor</th>
+                        <th>ID_Posto</th>
+                        <th>ID_Usuário</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cell1_1</td>
+                        <td>cell2_1</td>
+                        <td>cell3_1</td>
+                        <td>cell4_1</td>
+                        <td>cell1_1</td>
+                        <td>cell2_1</td>
+                        <td>cell3_1</td>
+                        <td>cell4_1</td>
+                        <td>cell3_1</td>
+                        <td>cell4_1</td>
+                    </tr>
+                    <tr>
+                        <td>cell1_1</td>
+                        <td>cell2_1</td>
+                        <td>cell3_1</td>
+                        <td>cell4_1</td>
+                        <td>cell1_1</td>
+                        <td>cell2_1</td>
+                        <td>cell3_1</td>
+                        <td>cell4_1</td>
+                        <td>cell3_1</td>
+                        <td>cell4_1</td>
+                    </tr>
+                    <tr>
+                        <td>cell1_1</td>
+                        <td>cell2_1</td>
+                        <td>cell3_1</td>
+                        <td>cell4_1</td>
+                        <td>cell1_1</td>
+                        <td>cell2_1</td>
+                        <td>cell3_1</td>
+                        <td>cell4_1</td>
+                        <td>cell3_1</td>
+                        <td>cell4_1</td>
+                    </tr>
+                    <tr>
+                        <td>cell1_1</td>
+                        <td>cell2_1</td>
+                        <td>cell3_1</td>
+                        <td>cell4_1</td>
+                        <td>cell1_1</td>
+                        <td>cell2_1</td>
+                        <td>cell3_1</td>
+                        <td>cell4_1</td>
+                        <td>cell3_1</td>
+                        <td>cell4_1</td>
+                    </tr>
+                    <tr>
+                        <td>cell1_1</td>
+                        <td>cell2_1</td>
+                        <td>cell3_1</td>
+                        <td>cell4_1</td>
+                        <td>cell1_1</td>
+                        <td>cell2_1</td>
+                        <td>cell3_1</td>
+                        <td>cell4_1</td>
+                        <td>cell3_1</td>
+                        <td>cell4_1</td>
+                    </tr>
+                </tbody>
+                </tr>
+            </table>
+        </div>
+    </div>
     </div>
     <div style="height: 12px; background-color: #F0F0F0;"></div>
     <div id="Rodape">
         <div class="buttons margin margin-bottom">
             <button class="button">Notificação</button>
-            <button class="button">Salvar</button>
+            <button class="button">Salvar
+
+            </button>
         </div>
     </div>
 </body>
+
 <script>
     var options = {
         onKeyPress: function (cpf, ev, el, op) {
