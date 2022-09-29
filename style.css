@@ -1,0 +1,705 @@
+    body {
+        margin: 0;
+        background-color: #FFF;
+        border-style: none;
+
+
+
+    }
+
+    .bloco {
+        min-height: 200px;
+        background-color: #3FA110;
+        border-radius: 10px;
+    }
+
+    .margin {
+        margin: 10px 10px 0px 10px;
+    }
+
+    .margin-bottom {
+        margin-bottom: 10px;
+    }
+
+    .margin-right {
+        margin-right: 10px;
+    }
+
+    #consulta {
+        width: 100%;
+        height: 70px;
+        position: absolute;
+        padding: 8px;
+        background-color: #FFF;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    .logo {
+        margin-left: 15px;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    .input-buttons {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .input-pesquisa {
+
+        background: transparent;
+        border: 0;
+        border-bottom: 1px solid #35890D;
+        width: 15vw;
+        height: 3vw;
+        font-size: 1.0rem;
+        color: gray;
+        padding: 1vw;
+    }
+
+    .input-pesquisa:hover {
+        background-color: #f4f4f4;
+        border-radius: 10px;
+
+    }
+
+    #fundo {
+        background-color: #F0F0F0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #associado {
+
+        margin: 10px;
+        border-radius: 10px;
+        background-color: #B7EC9C;
+        height: 600px;
+    }
+
+    #bancaria {
+        margin: 10px;
+        border-radius: 10px;
+        background-color: #B7EC9C;
+        height: 300px;
+    }
+
+    #titulo {
+        color: red;
+        display: block;
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: #FFF;
+        border-radius: 10px;
+        padding: 10px;
+        font-weight: bold;
+    }
+
+    .buttons .button {
+        padding: 12px 20px;
+        cursor: pointer;
+        border-radius: 4px;
+        background-color: #FFF;
+        color: #3FA110;
+        min-width: 100px;
+        font-weight: bold;
+        border: 1px solid #3FA110;
+
+    }
+
+    .buttons .button:hover {
+        background-color: #3FA110;
+        transition: 0.2s background-color;
+        color: #f4f4f4;
+
+    }
+
+    .buttons :first-child {
+        margin-right: 10px;
+    }
+
+    #saldo_cc {
+        margin: 0px 0px 0px 15px;
+        color: black;
+        font-family: Tahoma;
+        font-size: 13px;
+
+    }
+
+    /*STYLE TABELA*/
+
+    table.tabela_adq {
+        font-family: Tahoma;
+        background-color: #FFFFFF;
+        width: 98%;
+        height: 200px;
+        text-align: center;
+        border-collapse: collapse;
+        position: relative;
+        margin: 15px;
+        margin-top: 15px;
+        margin-bottom: 10px;
+
+    }
+
+    table.tabela_adq td,
+    table.tabela_adq th {
+        border: 1px solid #d0d0d0;
+        padding: 3px 2px;
+    }
+
+    table.tabela_adq tbody td {
+        font-size: 13px;
+        color: #404040;
+    }
+
+    table.tabela_adq tr:nth-child(even) {
+        background: #EBEBEB;
+    }
+
+    table.tabela_adq tr:hover {
+        background-color: #b7bfb791;
+        transition: 0.2s background-color;
+        color: #f4f4f4;
+    }
+
+    table.tabela_adq thead {
+        background: #b7bfb791;
+        border-bottom: 3px solid #514f4f;
+    }
+
+    table.tabela_adq thead th {
+        font-size: 500 12px Tahoma;
+        color: #404040;
+        text-align: center;
+        border: 1px solid #d0d0d0;
+
+    }
+
+    table.tabela_adq thead th:hover {
+        cursor: pointer;
+    }
+
+    table.tabela_adq thead th:first-child {
+        border-left: none;
+    }
+
+    table.tabela_adq tfoot td {
+        font-size: 12px;
+    }
+
+    /*SYTLE TITULO*/
+    h1 {
+        margin: 15px;
+        color: #FFF;
+        font-family: Tahoma;
+        font-size: 18px;
+        text-align: top;
+        justify-content: center;
+
+    }
+
+    /*SYTLE SUBTITULO*/
+    h2 {
+        margin: 15px;
+        color: #FFF;
+        font-family: Tahoma;
+        font-size: 16px;
+        font-weight: 600;
+        text-align: top;
+        justify-content: center;
+
+    }
+
+    /*STYLE_BLOCO1_DADOS_CADASTRAIS */
+
+    #form_CADASTRO_1 {
+        display: flex;
+        flex-direction: row;
+        margin: 5px;
+    }
+
+    #form_CADASTRO_2 {
+        display: flex;
+        flex-direction: row;
+        margin: 5px;
+
+    }
+
+    #form_CADASTRO_3 {
+        display: flex;
+        flex-direction: row;
+        margin: 5px;
+
+    }
+
+    #form_CADASTRO_4 {
+        display: flex;
+        flex-direction: row;
+        margin: 5px;
+
+    }
+
+    #label_RAZAO {
+        width: 320px;
+        padding-right: 95px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        background-color: #B7EC9C;
+        border-radius: 5px;
+        position: absolute;
+        left: 480px;
+
+        text-transform: uppercase;
+        text-align: left;
+        color: #404040;
+        font-family: Tahoma;
+        font-size: 14px;
+    }
+
+    #titulo_RAZAO {
+        font-size: 14px;
+        margin: 5px;
+        display: block;
+        position: absolute;
+        left: 380px;
+        color: #fff;
+        font-family: Tahoma;
+        justify-content: center;
+    }
+
+    #label_CPF_CNPJ {
+        width: 150px;
+        padding-right: 95px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        background-color: #B7EC9C;
+        border-radius: 5px;
+        position: absolute;
+        left: 100px;
+
+        text-transform: uppercase;
+        text-align: left;
+        color: #404040;
+        font-family: Tahoma;
+        font-size: 14px;
+    }
+
+    #titulo_CPF_CNPJ {
+        font-size: 14px;
+        margin: 5px;
+        display: block;
+        color: #fff;
+        font-family: Tahoma;
+        justify-content: center;
+    }
+
+    #maps {
+
+        width: 15%;
+        height: 15%;
+        left: 81%;
+        background-color: white;
+        position: absolute;
+        border-radius: 10px;
+        display: flex;
+
+    }
+
+    #receita {
+
+        width: 100px;
+        height: 140px;
+        left: 72.5%;
+        background-color: #FFF;
+        position: absolute;
+        border-radius: 10px;
+    }
+
+    #label_cnae {
+        width: 150px;
+        padding-right: 50px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        background-color: #B7EC9C;
+        border-radius: 5px;
+        position: absolute;
+        left: 100px;
+
+        text-transform: uppercase;
+        text-align: left;
+        color: #404040;
+        font-family: Tahoma;
+        font-size: 14px;
+    }
+
+    #titulo_cnae {
+        font-size: 14px;
+        margin: 5px;
+        display: block;
+        color: #fff;
+        font-family: Tahoma;
+        justify-content: center;
+    }
+
+    #label_atividade {
+        width: 320px;
+        padding-right: 95px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        background-color: #B7EC9C;
+        border-radius: 5px;
+        position: absolute;
+        left: 480px;
+
+        text-transform: uppercase;
+        text-align: left;
+        color: #404040;
+        font-family: Tahoma;
+        font-size: 14px;
+    }
+
+    #titulo_atividade {
+        font-size: 14px;
+        margin: 5px;
+        display: block;
+        position: absolute;
+        left: 340px;
+        color: #fff;
+        font-family: Tahoma;
+        justify-content: center;
+    }
+
+    #label_endereco {
+        width: 400px;
+        padding-right: 95px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        background-color: #B7EC9C;
+        border-radius: 5px;
+        position: absolute;
+        left: 100px;
+
+        text-transform: uppercase;
+        text-align: left;
+        color: #404040;
+        font-family: Tahoma;
+        font-size: 14px;
+    }
+
+    #titulo_endereco {
+        font-size: 14px;
+        margin: 5px;
+        display: block;
+        color: #fff;
+        font-family: Tahoma;
+        justify-content: center;
+    }
+
+    #label_numero {
+        width: 100px;
+        padding-right: 95px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        background-color: #B7EC9C;
+        border-radius: 5px;
+        position: absolute;
+        left: 700px;
+
+        text-transform: uppercase;
+        text-align: left;
+        color: #404040;
+        font-family: Tahoma;
+        font-size: 14px;
+    }
+
+    #titulo_numero {
+        font-size: 14px;
+        margin: 5px;
+        display: block;
+        position: absolute;
+        left: 620px;
+        color: #fff;
+        font-family: Tahoma;
+        justify-content: center;
+    }
+
+    #label_CEP {
+        width: 100px;
+        padding-right: 95px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        background-color: #B7EC9C;
+        border-radius: 5px;
+        position: absolute;
+        left: 100px;
+
+        text-transform: uppercase;
+        text-align: left;
+        color: #404040;
+        font-family: Tahoma;
+        font-size: 14px;
+    }
+
+    #titulo_CEP {
+        font-size: 14px;
+        margin: 5px;
+        display: block;
+        color: #fff;
+        font-family: Tahoma;
+        justify-content: center;
+    }
+
+    /*STYLE_BLOCO2_SALDO_CC */
+
+    #form_SALDO {
+        display: flex;
+        flex-direction: row;
+        margin: 5px;
+    }
+
+    #label_saldo_CC {
+        width: 150px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        background-color: #3FA110;
+        border-radius: 5px;
+        left: 170px;
+
+        text-align: left;
+        color: #fff;
+        font-family: Tahoma;
+        font-size: 14px;
+    }
+
+    #titulo_saldo_CC {
+        font-size: 14px;
+        margin: 5px;
+        color: #404040;
+        font-family: Tahoma;
+        font-weight: 600;
+
+    }
+
+    /*STYLE_BLOCO2_MARCAÇÃO*/
+    #form_marcacao {
+        display: flex;
+        flex-direction: row;
+        margin-left: 10px;
+
+    }
+
+    #label_dt_get {
+
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        background-color: #3FA110;
+        border-radius: 5px;
+        position: absolute;
+        left: 80%;
+
+        text-align: left;
+        color: #fff;
+        font-family: Tahoma;
+        font-size: 14px;
+    }
+
+    #titulo_dt_get {
+        font-size: 14px;
+        margin: 5px;
+        color: #404040;
+        font-family: Tahoma;
+        font-weight: 600;
+        justify-content: center;
+        position: absolute;
+        left: 72%;
+    }
+
+    #label_dt_fiserv {
+
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        background-color: #3FA110;
+        border-radius: 5px;
+        position: absolute;
+        left: 60%;
+
+        text-align: left;
+        color: #fff;
+        font-family: Tahoma;
+        font-size: 14px;
+
+    }
+
+    #titulo_dt_fiserv {
+        font-size: 14px;
+        margin: 5px;
+        color: #404040;
+        font-family: Tahoma;
+        font-weight: 600;
+        justify-content: center;
+        position: absolute;
+        left: 52.5%;
+    }
+
+    #check_fluxo {
+        color: blueviolet;
+        border-radius: 5px;
+        margin-left: 10px;
+    }
+
+    #titulo_check {
+        padding-right: 50px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        background-color: #B7EC9C;
+        border-radius: 5px;
+        margin-left: 3px;
+
+        font-size: 14px;
+        color: #404040;
+        font-family: Tahoma;
+        font-weight: 600;
+
+    }
+
+    /*STYLE_BLOCO3_ADQ */
+
+    #form_ADQ_DT {
+        display: flex;
+        flex-direction: row;
+        margin: 5px;
+    }
+
+    #label_DT_install {
+        width: 100px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        background-color: #B7EC9C;
+        border-radius: 5px;
+        left: 100px;
+
+        text-transform: uppercase;
+        text-align: left;
+        color: #404040;
+        font-family: Tahoma;
+        font-size: 14px;
+    }
+
+    #titulo_DT_install {
+        font-size: 14px;
+        margin: 5px;
+        color: #fff;
+        font-family: Tahoma;
+        justify-content: center;
+        font-weight: 600;
+    }
+
+    #label_1_transacao {
+        width: 100px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        background-color: #B7EC9C;
+        border-radius: 5px;
+        left: 300px;
+
+        text-transform: uppercase;
+        text-align: left;
+        color: #404040;
+        font-family: Tahoma;
+        font-size: 14px;
+    }
+
+    #titulo_1_transacao {
+        font-size: 14px;
+        margin: 5px;
+        color: #fff;
+        font-family: Tahoma;
+        justify-content: center;
+        font-weight: 600;
+    }
+
+    #label_ult_transacao {
+        width: 100px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        background-color: #B7EC9C;
+        border-radius: 5px;
+        left: 300px;
+
+        text-transform: uppercase;
+        text-align: left;
+        color: #404040;
+        font-family: Tahoma;
+        font-size: 14px;
+    }
+
+    #titulo_ult_transacao {
+        font-size: 14px;
+        margin: 5px;
+        color: #fff;
+        font-family: Tahoma;
+        justify-content: center;
+        font-weight: 600;
+    }
+
+    #label_sem_transacao {
+        width: 100px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        background-color: #B7EC9C;
+        border-radius: 5px;
+        left: 300px;
+
+        text-transform: uppercase;
+        text-align: left;
+        color: #404040;
+        font-family: Tahoma;
+        font-size: 14px;
+    }
+
+    #titulo_sem_transacao {
+        font-size: 14px;
+        margin: 5px;
+        color: #fff;
+        font-family: Tahoma;
+        justify-content: center;
+        font-weight: 600;
+    }

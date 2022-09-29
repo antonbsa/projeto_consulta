@@ -1,507 +1,23 @@
 <!DOCTYPE>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="pt-BR">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8">
     <!-- fonte de ícones -->
     <link rel="icon" href="./ICON/logo-sicredi-icon-1024.png">
     <link rel="icon_MOVI" href="./ICON/MOVI.svg">
     <link rel="icon_CASD" href="./ICON/CASD.svg">
     <link rel="icon_ASSO" href="./ICON/ASSO.svg">
+    <link rel="stylesheet" href="style.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"
+        integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs"
+        crossorigin="anonymous"></script>
 
     <title>Prevenção à Fraudes</title>
 </head>
-<style>
-    body {
-        margin: 0;
-        background-color: #FFF;
-        border-style: none;
-
-
-
-    }
-
-    .bloco {
-        min-height: 200px;
-        background-color: #3FA110;
-        border-radius: 10px;
-    }
-
-    .margin {
-        margin: 10px 10px 0px 10px;
-    }
-
-    .margin-bottom {
-        margin-bottom: 10px;
-    }
-
-    .margin-right {
-        margin-right: 10px;
-    }
-
-    #consulta {
-        width: 100%;
-        height: 70px;
-        position: absolute;
-        padding: 8px;
-        background-color: #FFF;
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        justify-content: space-between;
-
-    }
-
-    .logo {
-        margin-left: 15px;
-    }
-
-    .logo img {
-        width: 150px;
-    }
-
-    .input-buttons {
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-    }
-
-    .input-pesquisa {
-
-        background: transparent;
-        border: 0;
-        border-bottom: 1px solid #35890D;
-        width: 15vw;
-        height: 3vw;
-        font-size: 1.0rem;
-        color: gray;
-        padding: 1vw;
-    }
-
-    .input-pesquisa:hover {
-        background-color: #f4f4f4;
-        border-radius: 10px;
-
-    }
-
-    #fundo {
-        background-color: #F0F0F0;
-        display: flex;
-        flex-direction: column;
-    }
-
-    #associado,
-    #bancaria {
-        margin: 10px;
-        border-radius: 10px;
-        background-color: #B7EC9C;
-        height: 300px;
-    }
-
-    #titulo {
-        color: red;
-        display: block;
-        flex-direction: column;
-        align-items: flex-start;
-
-    }
-
-    .buttons {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        background-color: #FFF;
-        border-radius: 10px;
-        padding: 10px;
-        font-weight: bold;
-    }
-
-    .buttons .button {
-        padding: 12px 20px;
-        cursor: pointer;
-        border-radius: 4px;
-        background-color: #FFF;
-        color: #3FA110;
-        min-width: 100px;
-        font-weight: bold;
-        border: 1px solid #3FA110;
-
-    }
-
-    .buttons .button:hover {
-        background-color: #3FA110;
-        transition: 0.2s background-color;
-        color: #f4f4f4;
-
-    }
-
-    .buttons :first-child {
-        margin-right: 10px;
-    }
-
-    #saldo_cc {
-        margin: 0px 0px 0px 15px;
-        color: black;
-        font-family: Tahoma;
-        font-size: 13px;
-
-    }
-
-    #recebe_saldo {
-        background-color: red;
-
-    }
-
-    /*STYLE TABELA _ADQ*/
-
-    table.tabela_adq {
-        font-family: Tahoma;
-        background-color: #FFFFFF;
-        width: 98%;
-        height: 200px;
-        text-align: center;
-        border-collapse: collapse;
-        position: relative;
-        margin: 15px;
-
-    }
-
-    table.tabela_adq td,
-    table.tabela_adq th {
-        border: 1px solid #d0d0d0;
-        padding: 3px 2px;
-    }
-
-    table.tabela_adq tbody td {
-        font-size: 13px;
-        color: #404040;
-    }
-
-    table.tabela_adq tr:nth-child(even) {
-        background: #EBEBEB;
-    }
-
-    table.tabela_adq tr:hover {
-        background-color: #b7bfb791;
-        transition: 0.2s background-color;
-        color: #f4f4f4;
-    }
-
-    table.tabela_adq thead {
-        background: #b7bfb791;
-        border-bottom: 3px solid #514f4f;
-    }
-
-    table.tabela_adq thead th {
-        font-size: 500 12px Tahoma;
-        color: #404040;
-        text-align: center;
-        border: 1px solid #d0d0d0;
-
-    }
-
-    table.tabela_adq thead th:hover {
-        cursor: pointer;
-    }
-
-    table.tabela_adq thead th:first-child {
-        border-left: none;
-    }
-
-    table.tabela_adq tfoot td {
-        font-size: 12px;
-    }
-
-    /*SYTLE TITULO*/
-    h1 {
-        margin: 15px;
-        color: #FFF;
-        font-family: Tahoma;
-        font-size: 18px;
-        text-align: top;
-        justify-content: center;
-
-    }
-
-    /*STYLE_BLOCO1_DADOS_CADASTRAIS */
-
-    #form_CADASTRO_1 {
-        display: flex;
-        flex-direction: row;
-        margin: 5px;
-    }
-
-    #form_CADASTRO_2 {
-        display: flex;
-        flex-direction: row;
-        margin: 5px;
-
-    }
-
-    #form_CADASTRO_3 {
-        display: flex;
-        flex-direction: row;
-        margin: 5px;
-
-    }
-
-    #form_CADASTRO_4 {
-        display: flex;
-        flex-direction: row;
-        margin: 5px;
-
-    }
-
-    #label_RAZAO {
-        width: 320px;
-        padding-right: 95px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-left: 10px;
-        background-color: #B7EC9C;
-        border-radius: 5px;
-        position: absolute;
-        left: 480px;
-
-        text-transform: uppercase;
-        text-align: left;
-        color: #404040;
-        font-family: Tahoma;
-        font-size: 14px;
-    }
-
-    #titulo_RAZAO {
-        font-size: 14px;
-        margin: 5px;
-        display: block;
-        position: absolute;
-        left: 380px;
-        color: #fff;
-        font-family: Tahoma;
-        justify-content: center;
-    }
-
-    #label_CPF_CNPJ {
-        width: 150px;
-        padding-right: 95px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-left: 10px;
-        background-color: #B7EC9C;
-        border-radius: 5px;
-        position: absolute;
-        left: 100px;
-
-        text-transform: uppercase;
-        text-align: left;
-        color: #404040;
-        font-family: Tahoma;
-        font-size: 14px;
-    }
-
-    #titulo_CPF_CNPJ {
-        font-size: 14px;
-        margin: 5px;
-        display: block;
-        color: #fff;
-        font-family: Tahoma;
-        justify-content: center;
-    }
-
-    #maps {
-
-        width: 215px;
-        height: 140px;
-        left: 81%;
-        background-color: white;
-        position: absolute;
-
-    }
-
-    #receita {
-
-        width: 100px;
-        height: 140px;
-        left: 72.5%;
-        background-color: #FFF;
-        position: absolute;
-    }
-
-    #label_cnae {
-        width: 150px;
-        padding-right: 50px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-left: 5px;
-        background-color: #B7EC9C;
-        border-radius: 5px;
-        position: absolute;
-        left: 100px;
-
-        text-transform: uppercase;
-        text-align: left;
-        color: #404040;
-        font-family: Tahoma;
-        font-size: 14px;
-    }
-
-    #titulo_cnae {
-        font-size: 14px;
-        margin: 5px;
-        display: block;
-        color: #fff;
-        font-family: Tahoma;
-        justify-content: center;
-    }
-
-    #label_atividade {
-        width: 320px;
-        padding-right: 95px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-left: 10px;
-        background-color: #B7EC9C;
-        border-radius: 5px;
-        position: absolute;
-        left: 480px;
-
-        text-transform: uppercase;
-        text-align: left;
-        color: #404040;
-        font-family: Tahoma;
-        font-size: 14px;
-    }
-
-    #titulo_atividade {
-        font-size: 14px;
-        margin: 5px;
-        display: block;
-        position: absolute;
-        left: 340px;
-        color: #fff;
-        font-family: Tahoma;
-        justify-content: center;
-    }
-
-    #label_endereco {
-        width: 400px;
-        padding-right: 95px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-left: 10px;
-        background-color: #B7EC9C;
-        border-radius: 5px;
-        position: absolute;
-        left: 100px;
-
-        text-transform: uppercase;
-        text-align: left;
-        color: #404040;
-        font-family: Tahoma;
-        font-size: 14px;
-    }
-
-    #titulo_endereco {
-        font-size: 14px;
-        margin: 5px;
-        display: block;
-        color: #fff;
-        font-family: Tahoma;
-        justify-content: center;
-    }
-
-    #label_numero {
-        width: 100px;
-        padding-right: 95px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-left: 10px;
-        background-color: #B7EC9C;
-        border-radius: 5px;
-        position: absolute;
-        left: 700px;
-
-        text-transform: uppercase;
-        text-align: left;
-        color: #404040;
-        font-family: Tahoma;
-        font-size: 14px;
-    }
-
-    #titulo_numero {
-        font-size: 14px;
-        margin: 5px;
-        display: block;
-        position: absolute;
-        left: 620px;
-        color: #fff;
-        font-family: Tahoma;
-        justify-content: center;
-    }
-
-    #label_CEP {
-        width: 100px;
-        padding-right: 95px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-left: 10px;
-        background-color: #B7EC9C;
-        border-radius: 5px;
-        position: absolute;
-        left: 100px;
-
-        text-transform: uppercase;
-        text-align: left;
-        color: #404040;
-        font-family: Tahoma;
-        font-size: 14px;
-    }
-
-    #titulo_CEP {
-        font-size: 14px;
-        margin: 5px;
-        display: block;
-        color: #fff;
-        font-family: Tahoma;
-        justify-content: center;
-    }
-
-    /*STYLE_BLOCO2_SALDO_CC */
-
-    #form_SALDO {
-        display: flex;
-        flex-direction: row;
-        margin: 5px;
-    }
-
-    #label_saldo_CC {
-        width: 150px;
-        padding-right: 95px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-left: 10px;
-        background-color: #3FA110;
-        border-radius: 5px;
-        left: 170px;
-
-        text-align: left;
-        color: #fff;
-        font-family: Tahoma;
-        font-size: 14px;
-    }
-
-    #titulo_saldo_CC {
-        font-size: 14px;
-        margin: 5px;
-        color: #404040;
-        font-family: Tahoma;
-        justify-content: center;
-    }
-</style>
 
 <body>
     <div id="consulta">
@@ -557,11 +73,149 @@
         </div>
 
         <div class="bloco margin" id="bloco2">
-            <div class="bloco margin" id="associado">
+            <div class="margin" id="associado">
                 <h1><img src="./ICON/ASSO.svg" alt="icon_associado"
                         style="width: 30px;text-align: center;margin: 5px 0px -7px -5px;">
                     Dados do Associado
                 </h1>
+                <form>
+                    <div id="form_marcacao">
+                        <input type="checkbox" id="check_fluxo"></input>
+                        <label id="titulo_check">Fluxo de Exceção</label>
+                        <input type="checkbox" id="check_Antecipação"></input>
+                        <label id="titulo_check">Antecipação Automática</label>
+                        <input type="checkbox" id="check_Link"></input>
+                        <label id="titulo_check">Link de Pagamento</label>
+
+                        <label id="titulo_dt_fiserv">Cred. Fiserv</label>
+                        <label id="label_dt_fiserv">00/00/0000</label>
+                        <label id="titulo_dt_get">Cred. Getnet</label>
+                        <label id="label_dt_get">00/00/0000</label>
+                    </div>
+                </form>
+                <h2>Portal Aceitação</h2>
+                <table id="table" class="tabela_adq">
+                    <thead>
+                        <tr>
+                            <th onclick="sortTable1(0)">EC/ MID</th>
+                            <th onclick="sortTable1(1)">Status</th>
+                            <th onclick="sortTable1(2)">Credenciamento</th>
+                            <th onclick="sortTable1(3)">Descredenciamento</th>
+                            <th onclick="sortTable1(4)">Atualizado</th>
+                            <th onclick="sortTable1(5)">Tecnologia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>cell1_1</td>
+                            <td>cell2_2</td>
+                            <td>01/01/2022</td>
+                            <td>cell4_1</td>
+                            <td>cell1_1</td>
+                            <td>cell2_1</td>
+                        </tr>
+                        <tr>
+                            <td>cell1_2</td>
+                            <td>cell2_2</td>
+                            <td>01/02/2017</td>
+                            <td>cell4_1</td>
+                            <td>cell1_1</td>
+                            <td>cell2_1</td>
+                        </tr>
+                        <tr>
+                            <td>cell1_3</td>
+                            <td>cell2_2</td>
+                            <td>01/03/2020</td>
+                            <td>cell4_1</td>
+                            <td>cell1_1</td>
+                            <td>cell2_1</td>
+                        </tr>
+                        <tr>
+                            <td>cell1_4</td>
+                            <td>cell2_2</td>
+                            <td>01/04/2022</td>
+                            <td>cell4_1</td>
+                            <td>cell1_1</td>
+                            <td>cell2_1</td>
+                        </tr>
+                        <tr>
+                            <td>cell1_5</td>
+                            <td>cell2_2</td>
+                            <td>01/05/2018</td>
+                            <td>cell3_3</td>
+                            <td>cell1_1</td>
+                            <td>cell2_1</td>
+                        </tr>
+                    </tbody>
+                    </tr>
+                </table>
+                <h2>Relacionamento Sicredi</h2>
+                <table id="table" class="tabela_adq">
+                    <thead>
+                        <tr>
+                            <th onclick="sortTable1(0)">Agência</th>
+                            <th onclick="sortTable1(1)">N° de Conta</th>
+                            <th onclick="sortTable1(2)">Tipo</th>
+                            <th onclick="sortTable1(3)">Status</th>
+                            <th onclick="sortTable1(4)">Sistema</th>
+                            <th onclick="sortTable1(5)">Criado em</th>
+                            <th onclick="sortTable1(6)">Fechado em</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>cell1_1</td>
+                            <td>cell2_2</td>
+                            <td>01/01/2022</td>
+                            <td>cell4_1</td>
+                            <td>cell1_1</td>
+                            <td>cell2_1</td>
+                            <td>cell3_1</td>
+
+                        </tr>
+                        <tr>
+                            <td>cell1_2</td>
+                            <td>cell2_2</td>
+                            <td>01/02/2017</td>
+                            <td>cell4_1</td>
+                            <td>cell1_1</td>
+                            <td>cell2_1</td>
+                            <td>cell3_1</td>
+
+                        </tr>
+                        <tr>
+                            <td>cell1_3</td>
+                            <td>cell2_2</td>
+                            <td>01/03/2020</td>
+                            <td>cell4_1</td>
+                            <td>cell1_1</td>
+                            <td>cell2_1</td>
+                            <td>cell3_1</td>
+
+                        </tr>
+                        <tr>
+                            <td>cell1_4</td>
+                            <td>cell2_2</td>
+                            <td>01/04/2022</td>
+                            <td>cell4_1</td>
+                            <td>cell1_1</td>
+                            <td>cell2_1</td>
+                            <td>cell3_1</td>
+
+                        </tr>
+                        <tr>
+                            <td>cell1_5</td>
+                            <td>cell2_2</td>
+                            <td>01/05/2018</td>
+                            <td>cell3_3</td>
+                            <td>cell1_1</td>
+                            <td>cell2_1</td>
+                            <td>cell3_1</td>
+                        </tr>
+                    </tbody>
+                    </tr>
+                </table>
             </div>
             <div class="bloco margin" style="margin-top: 0;" id="bancaria">
                 <h1><img src="./ICON/MOVI.svg" alt="icon_banco"
@@ -662,6 +316,18 @@
                     style="width: 30px;text-align: center;margin: -5px 0px -7px 0px;">
                 Movimentação Adquirência
             </h1>
+            <form id="form_ADQ_DT">
+                <div id="form_DT_ADQ" style="margin-top: 10px;">
+                    <label id="titulo_DT_install">Data de Instalação</label>
+                    <label id="label_DT_install">00/00/0000</label>
+                    <label id="titulo_1_transacao">Data Primeira Transação</label>
+                    <label id="label_1_transacao">00/00/0000</label>
+                    <label id="titulo_ult_transacao">Data Última Transação</label>
+                    <label id="label_ult_transacao">00/00/0000</label>
+                    <label id="titulo_sem_transacao">Dias Sem Transacionar</label>
+                    <label id="label_sem_transacao">000</label>
+                </div>
+            </form>
             <table id="table" class="tabela_adq">
                 <thead>
                     <tr>
@@ -748,8 +414,9 @@
     <div style="height: 12px; background-color: #F0F0F0;"></div>
     <div id="Rodape">
         <div class="buttons margin margin-bottom">
+
             <button class="button">Notificação</button>
-            <button class="button">Salvar
+            <button onclick="gerarPdf()" method="GET" class="button">Salvar
 
             </button>
         </div>
@@ -757,6 +424,18 @@
 </body>
 
 <script>
+    // Geração de PDF
+    function gerarPdf() {
+
+        // Instanciar o jsPDF
+        var doc = new jsPDF()
+        let data = new Date().toLocaleDateString().slice(0, 10);
+        let RAZAO = document.getElementById('label_RAZAO').innerText;
+        let EC = document.getElementById('label_CPF_CNPJ').innerText;
+
+        doc.save(data + "-" + RAZAO + "-" + EC + ".pdf");
+    }
+
     // Formatação campo CPF/CNPJ
     var options = {
         onKeyPress: function (cpf, ev, el, op) {
